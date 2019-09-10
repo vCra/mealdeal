@@ -1,1 +1,1 @@
-web: gunicorn mealdeal:mealdeal.wsgi --log-file -
+web: cd mealdeal && mealdeal.wsgi --log-file -
