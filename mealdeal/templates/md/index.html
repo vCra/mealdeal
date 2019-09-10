@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tesco Meal Deal Generator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>The Tesco Meal Deal Generator</strong>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">The Tesco Meal Deal Generator</h1>
+            <p class="lead text-muted">This meal deal would normally cost you <b>£{{ total_price }}</b>, but a Tesco meal deal
+                will cost you £3, which means that you save <b>£{{ savings }}</b></p>
+            <a class="btn btn-secondary" href="/">Give me more Meal Deals</a>
+        </div>
+    </section>
+    <section>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow h-100 ">
+                            <img class="card-img-top" src="{{ main_item.image }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h3>{{ main_item }}</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View on
+                                            tesco.com
+                                        </button>
+                                    </div>
+                                    <small class="text-muted">£{{ main_item.price }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow h-100">
+                            <img class="card-img-top" src="{{ snack_item.image }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h3>{{ snack_item }}</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View on
+                                            tesco.com
+                                        </button>
+                                    </div>
+                                    <small class="text-muted">£{{ snack_item.price }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow h-100">
+                            <img class="card-img-top" src="{{ drink_item.image }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h3>{{ drink_item }}</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View on tesco.com
+                                        </button>
+                                    </div>
+                                    <small class="text-muted">£{{ drink_item.price }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.6/holder.min.js"></script>
+
+</body>
+</html>
