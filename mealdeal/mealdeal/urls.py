@@ -20,7 +20,6 @@ from md.views import HomeView, MaxCostView, MinCostView, AllCostView
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', HomeView.as_view()),
     path('max', MaxCostView.as_view()),
     path('min', MinCostView.as_view()),
